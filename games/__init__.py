@@ -2,7 +2,16 @@
 游戏模块
 """
 
-from .base_game import BaseGame
-from .base_env import BaseEnv
+from .gomoku import GomokuGame, GomokuEnv
+from .snake import SnakeGame, SnakeEnv
 
-__all__ = ['BaseGame', 'BaseEnv'] 
+try:
+    from .sokoban import SokobanGame, SokobanEnv
+    _sokoban_games = ['SokobanGame', 'SokobanEnv']
+except ImportError:
+    _sokoban_games = []
+
+__all__ = [
+    'GomokuGame', 'GomokuEnv',
+    'SnakeGame', 'SnakeEnv'
+] + _sokoban_games
