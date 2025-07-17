@@ -1,17 +1,16 @@
 """
-游戏模块
+推箱子游戏模块
 """
 
-from .gomoku import GomokuGame, GomokuEnv
-from .snake import SnakeGame, SnakeEnv
-
-try:
-    from .sokoban import SokobanGame, SokobanEnv
-    _sokoban_games = ['SokobanGame', 'SokobanEnv']
-except ImportError:
-    _sokoban_games = []
+from .sokoban_game import SokobanGame, LEVELS, create_level, validate_level, get_level_by_difficulty, get_random_level
+from .sokoban_env import SokobanEnv
 
 __all__ = [
-    'GomokuGame', 'GomokuEnv',
-    'SnakeGame', 'SnakeEnv'
-] + _sokoban_games
+    'SokobanGame', 
+    'SokobanEnv', 
+    'LEVELS', 
+    'create_level', 
+    'validate_level',
+    'get_level_by_difficulty',
+    'get_random_level'
+]
