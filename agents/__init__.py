@@ -12,7 +12,6 @@ from .ai_bots.rl_bot import RLBot
 from .ai_bots.behavior_tree_bot import BehaviorTreeBot
 from .ai_bots.snake_ai import SnakeAI, SmartSnakeAI
 
-# 检查是否有推箱子AI（如果已经实现）
 try:
     from .ai_bots.sokoban_ai import SokobanAI, SmartSokobanAI, ExpertSokobanAI
     _sokoban_agents = ['SokobanAI', 'SmartSokobanAI', 'ExpertSokobanAI']
