@@ -28,6 +28,9 @@ COLORS = {
 
 class SnakeGUI:
     """贪吃蛇图形界面"""
+    class SnakeGame:
+    def __init__(self):
+        self.board_size = 10  # 必须初始化这个变量
     
     def __init__(self):
         # 初始化pygame
